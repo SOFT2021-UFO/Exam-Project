@@ -13,7 +13,7 @@ By employing normalization, data is only stored once, which eliminates data dupl
 
 \subsection{Where do non-relational databases perform well}
 It can easily handle large amounts of complex and unstructured data, which makes the non-relational databases excel in scaling up existing databases.
-Non-relational databases are designed for horizontal scaling, this means that instead of scaling up by increasing the server's components like RAM, CPU, or SSD, non-relational database scales horizontally, so instead increasing a servers capacity, horizontal scaling is about adding multiple servers to handle the database. \parencite{mongodb-advantages-of-nosql}
+Non-relational databases are designed for horizontal scaling, this means that instead of scaling up by increasing the server's components like RAM, CPU, or SSD, non-relational database scales horizontally, so instead increasing a servers capacity, horizontal scaling is about adding multiple servers to handle the database \parencite{mongodb-advantages-of-nosql}.
 This is due to a non-relational database not having the need to unpack the complexity of new data into tables, instead it stores the data into documents as we explained in section \ref{sec:what-describes-a-non-relational-database}.
 
 
@@ -24,7 +24,7 @@ With the design and properties of relational databases if the system needs to sc
 \subsection{Where do non-relational databases fail to perform}
 A disadvantage when it comes to non-relational databases lies in not fully following the ACID properties. There are not many defined standards for NoSQL databases, which may result in inter-connectivity -and cross-integration issues between different NoSQL databases. \parencite{loginradius-rdbms-vs-nosql}
 
-This is where Non-Relational databases trade in performances, for the security that ACID brings when handling the data. The security that ACID brings lies in the way that it forces the database from handling new requests, until the data has hit the disk, which secures that data will not be lost in the process of handling large amounts of requests.
+This is where non-relational databases trade in performances, for the security that ACID brings when handling the data. The security that ACID brings lies in the way that it forces the database from handling new requests, until the data has hit the disk, which secures that data will not be lost in the process of handling large amounts of requests.
 Whereas non-relational databases they tend to follow BASE with stands for Basically Available, Soft State, and Eventually Consistent. 
 BASE is all about performance and speed but lacks in the security departments this is because unlike ACID, BASE don’t have to wait until the data have hit the disk, this makes a performance advantage but at the cost of risking to lose data you have just written  \parencite{neo4j-acid-vs-base} \parencite{dataversity-acid-vs-base}.
 
