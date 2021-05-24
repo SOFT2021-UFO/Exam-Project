@@ -1,0 +1,38 @@
+\section{Comparison}
+
+\subsection{Where do relational databases perform well}
+After storing and categorizing the data into the tables, a view with complex sql queries can then be crated, to easily retrieve from or save to multiple tables at once.
+
+Due to the nature of relational databases, navigating -and joining tables together is relatively uncomplicated, and complex queries are easy for users to carry out, which makes the structure flexible.
+
+Multiple users can access, make changes and create requests simultaneously.
+
+Relational database models are matured and therefore are well-understood adding to the trust behind them. Data in tables within a RDBMS can be restricted to allow access by given users.
+
+By employing normalization, data is only stored once, which eliminates data duplication and redundancy \parencite{microsoft-normaliziation}.
+
+\subsection{Where do non-relational databases perform well}
+It can easily handle large amounts of complex and unstructured data, which makes the non-relational databases excel in scaling up existing databases.
+Non-relational databases are designed for horizontal scaling, this means that instead of scaling up by increasing the server's components like RAM, CPU, or SSD, non-relational database scales horizontally, so instead increasing a servers capacity, horizontal scaling is about adding multiple servers to handle the database \parencite{mongodb-advantages-of-nosql}.
+This is due to a non-relational database not having the need to unpack the complexity of new data into tables, instead it stores the data into documents as we explained in section \ref{sec:what-describes-a-non-relational-database}.
+
+
+\subsection{Where do relational databases fail to perform}
+Horizontal scaling is a huge downfall for relational databases. Relational databases are made to run on a single server maintaining the integrity of the table mappings. If you were to scale horizontal you would ruin the accuracy of the saved data. This is because when you have multiple instances of the database, syncing them will sometimes create inaccurate data across the instances, meaning that you might oversee an update.
+With the design and properties of relational databases if the system needs to scale you need to scale it vertically to ensure accuracy. \parencite{loginradius-rdbms-vs-nosql}
+
+\subsection{Where do non-relational databases fail to perform}
+A disadvantage when it comes to non-relational databases lies in not fully following the ACID properties. There are not many defined standards for NoSQL databases, which may result in inter-connectivity -and cross-integration issues between different NoSQL databases. \parencite{loginradius-rdbms-vs-nosql}
+
+This is where non-relational databases trade in performances, for the security that ACID brings when handling the data. The security that ACID brings lies in the way that it forces the database from handling new requests, until the data has hit the disk, which secures that data will not be lost in the process of handling large amounts of requests.
+Whereas non-relational databases they tend to follow BASE with stands for Basically Available, Soft State, and Eventually Consistent. 
+BASE is all about performance and speed but lacks in the security departments this is because unlike ACID, BASE doesn't have to wait until the data have hit the disk, this makes a performance advantage but at the cost of risking to lose data you have just written  \parencite{neo4j-acid-vs-base} \parencite{dataversity-acid-vs-base}.
+
+\subsection{What are the differences}
+When it comes to comparing non-relational databases and relational-databases and when to use them, there will never be a clear cut answer to which one is best. This is of course because there will always be a reason to pick one above the other.
+Before distributed systems, the relational database with ACID properties did all what we needed, and at that time we only really had data stored in one place.
+
+As technology grew we needed more scalability to deal with the massive amounts of data we wanted to store, and to scale a databases you will have to either go vertical or horizontal.
+Vertical scaling is harder to achieve because of high cost and cap to speeds on a single system. Horizontal scaling scales better since you have multiple databases running on separate systems. This is where non-relational databases really shine, because of how easy it is to save any kind of data set, and it’s horizontal scaling \parencite{investopedia-horizontal-vs-vertical-scaling}.
+Scaling is one of the big diverging features between non-relational and relational databases, but a big downfall for non-relational databases "take all" approach, is that it does not have a main query language unlike Relational Databases SQL. 
+Relational databases are excellent at maintaining relationships and consistency due to of the table structure and ACID, whereas, non-relational databases are faster but lack consistency since they do not check if the write persisted which can result in loss of data.
